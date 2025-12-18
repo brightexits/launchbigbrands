@@ -1,0 +1,8 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow confirmation/thank you pages
+Disallow: /confirmed/
+
+Sitemap: https://launchbigbrands.com/sitemap-index.xml

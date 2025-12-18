@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+---
+
+<BaseLayout 
+  title="You're Booked! - Launch Big Brands ™"
+  description="You're booked! We're excited to speak with you."
+  noindex={true}
+>
+  <Header showYellowStrip={false} />
+
+  <div style="background:#ffffff;min-height:calc(100vh - 94px);display:flex;align-items:center;justify-content:center;padding:40px 20px;">
+    <style>
+      .thankyou-wrap{
+        max-width:700px;
+        margin:0 auto;
+        text-align:center;
+        color:#0f172a;
+        font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      }
+      .thankyou-check{
+        font-size:52px;
+        background:linear-gradient(135deg,#2563eb,#06b6d4);
+        background-clip:text;
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        margin-bottom:12px;
+      }
+      .thankyou-wrap h1{
+        font-size:clamp(28px,5vw,40px);
+        font-weight:900;
+        margin:0 0 12px;
+      }
+      .thankyou-wrap p{
+        color:#475569;
+        font-size:18px;
+        margin:0 0 30px;
+      }
+      .thankyou-next{
+        background:#f9fafb;
+        border:1px solid #e5e7eb;
+        border-radius:16px;
+        padding:24px;
+        text-align:left;
+        box-shadow:0 8px 28px rgba(2,6,23,.06);
+        margin-bottom:30px;
+      }
+      .thankyou-next h2{
+        font-size:20px;
+        font-weight:800;
+        margin:0 0 16px;
+        color:#2563eb;
+        text-align:center;
+      }
+      .thankyou-next ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+        display:grid;
+        gap:14px;
+        font-size:16px;
+        color:#475569;
+      }
+      .thankyou-next li{
+        display:flex;
+        align-items:flex-start;
+        gap:10px;
+      }
+      .thankyou-next li span{
+        flex:0 0 22px;
+        width:22px;
+        height:22px;
+        border-radius:50%;
+        background:linear-gradient(135deg,#2563eb,#06b6d4);
+        display:grid;
+        place-items:center;
+        color:#fff;
+        font-size:13px;
+        font-weight:700;
+      }
+      .home-button{
+        display:inline-block;
+        background:linear-gradient(135deg,#2563eb,#06b6d4);
+        color:#fff;
+        text-decoration:none;
+        font-weight:900;
+        font-size:18px;
+        padding:16px 36px;
+        border-radius:14px;
+        box-shadow:0 8px 28px rgba(37,99,235,.25);
+        transition:transform .18s ease, box-shadow .18s ease;
+      }
+      @media (hover:hover){
+        .home-button:hover{
+          transform:translateY(-2px) scale(1.03);
+          box-shadow:0 12px 36px rgba(37,99,235,.35);
+        }
+      }
+    </style>
+
+    <div class="thankyou-wrap">
+      <div class="thankyou-check" aria-hidden="true">🎉</div>
+      <h1>You're Booked!</h1>
+      <p>Thank you for scheduling your call with <strong>Launch Big Brands</strong>.  
+         We're excited to walk you through how we build profitable ecommerce businesses.</p>
+
+      <div class="thankyou-next">
+        <h2>What happens next</h2>
+        <ul>
+          <li><span aria-hidden="true">1</span> Check your email for the calendar invite and meeting link.</li>
+          <li><span aria-hidden="true">2</span> Block out 30 minutes in a quiet place so we can focus fully.</li>
+          <li><span aria-hidden="true">3</span> Think about your goals and what excites you most about owning an ecommerce business.</li>
+          <li><span aria-hidden="true">4</span> We'll guide you step-by-step and show you how to go from idea to first sales in 30 days.</li>
+        </ul>
+      </div>
+
+      <a href="/" class="home-button">← Back to Home</a>
+    </div>
+  </div>
+</BaseLayout>
