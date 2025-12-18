@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import { organizationSchema, serviceSchema, generateFAQSchema } from '../lib/schema.ts';
 
+const base = import.meta.env.BASE_URL;
+
 const faqs = [
   {
     question: "Do you work with brand-new stores or only established ones?",
@@ -168,10 +170,10 @@ const structuredData = {
 
           <div class="proof">
             <div class="faces" aria-hidden="true">
-              <span class="face"><img src="/assets/images/2.png" alt="" width="44" height="44"></span>
-              <span class="face"><img src="/assets/images/3.png" alt="" width="44" height="44"></span>
-              <span class="face"><img src="/assets/images/4.png" alt="" width="44" height="44"></span>
-              <span class="face"><img src="/assets/images/1.png" alt="" width="44" height="44"></span>
+              <span class="face"><img src={`${base}/assets/images/2.png`} alt="" width="44" height="44"></span>
+              <span class="face"><img src={`${base}/assets/images/3.png`} alt="" width="44" height="44"></span>
+              <span class="face"><img src={`${base}/assets/images/4.png`} alt="" width="44" height="44"></span>
+              <span class="face"><img src={`${base}/assets/images/1.png`} alt="" width="44" height="44"></span>
             </div>
             <div class="proof-text">
               Over 50 brands trusted us in 2025
@@ -472,7 +474,7 @@ const structuredData = {
             </p>
           </div>
           <div class="right">
-            <img src="/assets/images/Untitled_design_18.png" alt="Launch Big Brands team collaboration" width="600" height="400" loading="lazy">
+            <img src={`${base}/assets/images/Untitled_design_18.png`} alt="Launch Big Brands team collaboration" width="600" height="400" loading="lazy">
           </div>
         </div>
       </div>
