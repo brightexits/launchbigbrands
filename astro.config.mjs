@@ -3,7 +3,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://launchbigbrands.com',
+  site: 'https://brightexits.github.io',
+  base: '/launchbigbrands',
   integrations: [
     sitemap({
       filter: (page) => 
