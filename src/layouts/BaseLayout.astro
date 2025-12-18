@@ -17,7 +17,6 @@ const {
   structuredData
 } = Astro.props;
 
-const base = import.meta.env.BASE_URL;
 const canonicalURL = new URL(canonical, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
 ---
@@ -60,17 +59,17 @@ const ogImageURL = new URL(ogImage, Astro.site);
   <meta name="twitter:image" content={ogImageURL}>
 
   <!-- Fonts -->
-  <link rel="preload" href={`${base}/assets/fonts/assistant_n4.9120912a469cad1cc292572851508ca49d12e768.woff2`} as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href={`${base}/assets/fonts/assistant_n7.bf44452348ec8b8efa3aa3068825305886b1c83c.woff2`} as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/assistant_n4.9120912a469cad1cc292572851508ca49d12e768.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/assistant_n7.bf44452348ec8b8efa3aa3068825305886b1c83c.woff2" as="font" type="font/woff2" crossorigin>
 
-  <style is:inline set:html={`
+  <style is:inline>
     @font-face {
       font-family: Assistant;
       font-weight: 400;
       font-style: normal;
       font-display: swap;
-      src: url("${base}/assets/fonts/assistant_n4.9120912a469cad1cc292572851508ca49d12e768.woff2") format("woff2"),
-           url("${base}/assets/fonts/assistant_n4.6e9875ce64e0fefcd3f4446b7ec9036b3ddd2985.woff") format("woff");
+      src: url("/assets/fonts/assistant_n4.9120912a469cad1cc292572851508ca49d12e768.woff2") format("woff2"),
+           url("/assets/fonts/assistant_n4.6e9875ce64e0fefcd3f4446b7ec9036b3ddd2985.woff") format("woff");
     }
 
     @font-face {
@@ -78,10 +77,10 @@ const ogImageURL = new URL(ogImage, Astro.site);
       font-weight: 700;
       font-style: normal;
       font-display: swap;
-      src: url("${base}/assets/fonts/assistant_n7.bf44452348ec8b8efa3aa3068825305886b1c83c.woff2") format("woff2"),
-           url("${base}/assets/fonts/assistant_n7.0c887fee83f6b3bda822f1150b912c72da0f7b64.woff") format("woff");
+      src: url("/assets/fonts/assistant_n7.bf44452348ec8b8efa3aa3068825305886b1c83c.woff2") format("woff2"),
+           url("/assets/fonts/assistant_n7.0c887fee83f6b3bda822f1150b912c72da0f7b64.woff") format("woff");
     }
-  `} />
+  </style>
   
   <style is:global>
 
